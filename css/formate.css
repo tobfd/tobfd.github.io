@@ -3,14 +3,75 @@ h1 {
 }
 h2 {
 	font-size: 2.6em;
-	color: red;
-	background-color: beige;
-	border: thin solid;
+	color: blue;
 	text-align: center;
+	font-family: 'Open Sans', sans-serif;
 }
 
 p {
-    color: brown;
-    font-size: 1.3em;
+    font-size: 1.2em;
+	color: #999999;
 }
 
+h3 {
+	font-size: 1.2em;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: black;
+}
+h4 {
+	font-size: 1em;
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h5 {
+	font-size: 1em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+	margin-right: 1px;
+  	margin-left: 1px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+h6 {
+	font-size: 1em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+h7 {
+	font-size: 1em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+}
+	
+ul {
+    font-size: 0.8em;
+    color: #999999;
+    font-family: 'Open Sans', sans-serif;
+}
+h8 {
+	font-size: 1em;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: #999999;
+}
+h9 {
+	font-size: 1.5em;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: #999999;
+}
+hu {
+	font-size: 1.4em;
+	font-family: 'Open Sans', sans-serif;
+	margin: auto;
+	color: black;}
+h10{
+	font-size: 0.8em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+}
