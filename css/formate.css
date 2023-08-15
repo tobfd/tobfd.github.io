@@ -6,6 +6,7 @@ h2 {
 	color: blue;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
+	
 }
 
 p {
@@ -72,6 +73,35 @@ hu {
 	color: black;}
 h10{
 	font-size: 0.8em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+}
+h11{
+	flex: 1;
+	font-size: 1.4em;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	color: #999999;
+}
+h12{
+	flex: 1;
+	font-size: 2em;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+	color: black;
+}
+h66{
+	font-size: 1em;
+	color: #999999;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	text-decoration: none;
+}
+hlol{
+	font-size: 1em;
 	color: #999999;
 	font-family: 'Open Sans', sans-serif;
 }
