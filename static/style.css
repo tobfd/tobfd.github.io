@@ -18,3 +18,18 @@
 .link {
     margin: 10px;
 }
+
+.email {
+    color: #949494;
+    text-decoration: none;
+}
+
+.email:after {
+    color: #949494;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: #ffff;
+    text-decoration: underline;
+}
