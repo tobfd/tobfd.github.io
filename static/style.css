@@ -1,0 +1,20 @@
+.small {
+    font-size: 0.8em;
+}
+
+.gray-background {
+    background-color: #171f36;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.link {
+    margin: 10px;
+}
