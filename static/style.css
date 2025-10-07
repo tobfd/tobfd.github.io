@@ -1,3 +1,27 @@
+/* Textauswahl-Farbe */
+::selection {
+    background-color: #9c39ff;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #9c39ff;
+    color: white;
+}
+
+/* Text-Hervorhebung */
+.highlight {
+    color: #aa5df8;
+    font-weight: 600;
+}
+
+/* Rundes Profilbild */
+img[alt="tobfd"] {
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 20px;
+}
+
 .small {
     font-size: 0.8em;
 }
@@ -17,14 +41,15 @@
 
 .link {
     margin: 10px;
-}
-
-.email {
-    color: #949494;
+    color: white;
     text-decoration: none;
 }
 
-.email:after {
+.link:hover {
+    text-decoration: underline;
+}
+
+.email {
     color: #949494;
     text-decoration: none;
 }
@@ -42,35 +67,27 @@
 }
 
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 55px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    width: 55px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
 
 .fa:hover {
     opacity: 0.7;
 }
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-    margin-right: 10px;
-}
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
+
 .fa-github {
-  background: #010409;
-  color: white;
-    margin-left: 10px;
+    background: #010409;
+    color: white;
+}
+
+.fa-steam {
+    background: #171a21;
+    color: white;
 }
 
 .description {
