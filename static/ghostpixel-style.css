@@ -1,0 +1,187 @@
+/* GhostPixel-spezifische Farben */
+:root {
+    --gp-primary: #2caeff;
+    --gp-primary-dark: #1d8cd4;
+    --gp-primary-light: #5cc4ff;
+    --gp-glow: rgba(44, 174, 255, 0.6);
+    --gp-glow-strong: rgba(44, 174, 255, 0.8);
+}
+
+/* Text-Hervorhebung für GhostPixel */
+.highlight {
+    color: var(--gp-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight:hover {
+    color: var(--gp-primary-light);
+    text-shadow: 0 0 20px var(--gp-glow-strong),
+                 0 0 30px var(--gp-glow),
+                 0 0 40px rgba(44, 174, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Navigation für GhostPixel */
+.nav-link::after {
+    background: linear-gradient(90deg, var(--gp-primary), var(--gp-primary-light));
+}
+
+.nav-link.active {
+    background-color: var(--gp-primary-dark);
+    box-shadow: 0 0 20px var(--gp-glow);
+}
+
+.nav-link:hover {
+    background-color: rgba(44, 174, 255, 0.1);
+}
+
+/* Screenshot Effekte für GhostPixel */
+.screenshot-img {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.screenshot-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 40px rgba(44, 174, 255, 0.4),
+                0 0 60px var(--gp-glow);
+    filter: brightness(1.1);
+}
+
+/* Button Effekte für GhostPixel */
+.bg-indigo-600, .bg-slate-700.px-6 {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-indigo-600::before, .bg-slate-700.px-6::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(44, 174, 255, 0.15);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.bg-indigo-600:hover::before, .bg-slate-700.px-6:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.bg-indigo-600:hover {
+    box-shadow: 0 0 30px var(--gp-glow);
+    transform: translateY(-2px);
+}
+
+.bg-slate-700.px-6:hover {
+    box-shadow: 0 0 30px rgba(44, 174, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Email Link Effekte für GhostPixel */
+.email:hover {
+    color: var(--gp-primary) !important;
+    text-shadow: 0 0 10px var(--gp-glow);
+}
+
+/* Footer Links Effekte für GhostPixel */
+.link:hover {
+    color: var(--gp-primary) !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px var(--gp-glow);
+}
+
+/* Language Selector Effekte für GhostPixel */
+#languageSelector:hover {
+    box-shadow: 0 0 15px rgba(44, 174, 255, 0.4);
+    transform: scale(1.05);
+}
+
+#languageSelector:focus {
+    outline: 2px solid var(--gp-primary);
+    box-shadow: 0 0 20px var(--gp-glow);
+}
+
+/* Pulse Animation für GhostPixel */
+@keyframes pulse-glow-gp {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(44, 174, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px var(--gp-glow);
+    }
+}
+
+.bg-indigo-600:active {
+    animation: pulse-glow-gp 0.5s ease;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--gp-primary), var(--gp-primary-dark));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(44, 174, 255, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px var(--gp-glow);
+}
+
+#scrollToTop.show {
+    display: flex;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feature Cards für GhostPixel */
+.bg-slate-700:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(44, 174, 255, 0.2);
+    background-color: #334155 !important;
+}
+
+/* Social Media Icons Glow für GhostPixel */
+.fa:hover {
+    opacity: 1;
+    box-shadow: 0 0 20px var(--gp-primary);
+    transform: scale(1.1) rotate(5deg);
+    transition: all 0.3s ease;
+}
+

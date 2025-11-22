@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta content="tobfd" property="og:title" />
-    <meta content="" property="og:description" />
+    <meta content="Tobias Schmitt (tobfd) - Passionate programmer from Hesse, Germany. Building useful, technically exciting, and creatively implemented projects." property="og:description" />
+    <meta name="description" content="Tobias Schmitt (tobfd) - Passionate programmer from Hesse, Germany specializing in Python and Kotlin. Building innovative projects with modern technologies." />
+    <meta name="keywords" content="tobfd, Tobias Schmitt, programmer, developer, Python, Kotlin, software development, web development" />
+    <meta name="author" content="Tobias Schmitt" />
     <meta content="https://github.com/tobfd/tobfd.github.io/blob/main/img/animated.gif?raw=true" property="og:image" />
     <meta content="#4984F8" data-react-helmet="true" name="theme-color" />
     <meta charset="UTF-8" />
@@ -10,19 +13,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/gif" href="./img/animated.gif"/>
     <link rel="stylesheet" href="static/style.css">
-    <title>Startseite - tobfd</title>
+    <title>tobfd - Software Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="bg-slate-900 px-20 py-32 text-white">
+<body class="bg-slate-900 text-white">
+<!-- Navigationsleiste -->
+<nav class="navbar">
+    <div class="navbar-center">
+        <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
+        <a href="ghostpixel.html" class="nav-link">GhostPixel</a>
+    </div>
+    <div class="navbar-right">
+        <select id="languageSelector" class="bg-slate-700 text-white px-4 py-2 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-600 transition-all">
+            <option value="en">🇬🇧 English</option>
+            <option value="de">🇩🇪 Deutsch</option>
+        </select>
+    </div>
+</nav>
+
+<div class="px-20 py-32">
 <div class="bg-slate-800 flex">
     <div class="w-2/5 flex items-center flex-col border-r border-neutral-600">
         <img class="w-3/5 mt-4" src="./img/animated.gif" alt="tobfd" />
         <div class="bg-slate-900 w-full px-8 py-4">
             <div class="name">tobfd</div>
-            <div class="description">
-                Softwareentwickler
+            <div class="description" data-i18n="home.title">
+                Software Developer
             </div>
             <div class="socials">
                 <a href="https://github.com/tobfd" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
@@ -31,40 +49,48 @@
         </div>
         <div class="w-full px-8 py-4">
             <div class="flex py-2 border-neutral-400 justify-between border-b">
-                Discord Name: <span class="text-neutral-400">tobfd</span>
+                <span data-i18n="home.discord">Discord Name:</span> <span class="text-neutral-400">tobfd</span>
             </div>
             <div class="flex py-2 border-neutral-400 justify-between border-b">
                 Email: <a href="mailto:support@tobfd.de" target="_blank" rel="noopener noreferrer"><span class="email">support@tobfd.de</span></a>
             </div>
             <div class="flex py-2 border-neutral-400 justify-between border-b">
-                Favorite Language: <span class="text-neutral-400">Python</span>
+                <span data-i18n="home.favLang">Favorite Language:</span> <span class="text-neutral-400">Python</span>
             </div>
         </div>
     </div>
     <div class="w-3/5 p-4">
-        <h1 class="text-3xl font-bold mb-2">Herzlich willkommen</h1>
-        <p class="mt-4">
-            Hey! Ich bin <span class="highlight">Tobias Schmitt</span> (<span class="highlight">tobfd</span>), ein leidenschaftlicher Programmierer aus <span class="highlight">Hessen, Deutschland</span>.
-            Ich programmiere am liebsten in <span class="highlight">Python</span>, aber interessiere mich auch für andere Sprachen wie z. B. <span class="highlight">Kotlin</span>.
+        <h1 class="text-3xl font-bold mb-2" data-i18n="home.welcome">Welcome</h1>
+        <p class="mt-4" data-i18n="home.intro">
+            Hey! I'm <span class="highlight">Tobias Schmitt</span> (<span class="highlight">tobfd</span>), a passionate programmer from <span class="highlight">Hesse, Germany</span>.
+            I prefer programming in <span class="highlight">Python</span>, but I'm also interested in other languages such as <span class="highlight">Kotlin</span>.
         </p>
-        <p class="mt-4">
-            Ich liebe es, Projekte zu bauen, die <span class="highlight">nützlich</span>, <span class="highlight">technisch spannend</span> und <span class="highlight">kreativ</span> umgesetzt sind.
+        <p class="mt-4" data-i18n="home.passion">
+            I love building projects that are <span class="highlight">useful</span>, <span class="highlight">technically exciting</span>, and <span class="highlight">creatively implemented</span>.
         </p>
-        <p class="mt-4">
-            Wenn ich nicht gerade code, zocke ich auch gerne 🎮. Ich mag <span class="highlight">Story-Games</span> mit Atmosphäre und Emotion – zum Beispiel <span class="highlight">Life is Strange</span> oder <span class="highlight">Horizon Zero Dawn</span> gehören zu meinen absoluten Favoriten.
+        <p class="mt-4" data-i18n="home.gaming">
+            When I'm not coding, I also enjoy gaming 🎮. I like <span class="highlight">story-driven games</span> with atmosphere and emotion—<span class="highlight">Life is Strange</span> and <span class="highlight">Horizon Zero Dawn</span>, for example, are among my absolute favorites.
         </p>
-        <p class="mt-4">
-            Außerdem experimentiere ich gern mit neuen Ideen, verbessere bestehende Projekte und probiere moderne Technologien aus.
+        <p class="mt-4" data-i18n="home.experimenting">
+            I also enjoy experimenting with new ideas, improving existing projects, and trying out modern technologies.
         </p>
-        <p class="mt-4">
-            Ich sehe Programmieren nicht nur als Arbeit oder Hobby, sondern als <span class="highlight">Möglichkeit, Ideen zum Leben zu erwecken</span> und immer etwas Neues zu lernen. 🚀
+        <p class="mt-4" data-i18n="home.philosophy">
+            I see programming not only as work or a hobby, but as an <span class="highlight">opportunity to bring ideas to life</span> and always learn something new. 🚀
         </p>
     </div>
 </div>
 <div class="links mt-8">
-    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/impressum" class="link" target="_blank" rel="noopener noreferrer">Impressum</a>
-    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches" class="link" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
-    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/nutzungsbedingungen-fur-ghostpixel" class="link" target="_blank" rel="noopener noreferrer">Nutzungsbedingungen</a>
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/impressum" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.imprint">Impressum</a>
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.privacy">Datenschutzerklärung</a>
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/nutzungsbedingungen-fur-ghostpixel" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.terms">Nutzungsbedingungen</a>
+
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel/legal-notice" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.imprint">Legal notice</a>
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.privacy">Privacy Policy</a>
+    <a href="https://tobfd.gitbook.io/legal-ghostpixel/terms-of-service-for-ghostpixel" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.terms">Terms of Service</a>
 </div>
+</div>
+
+<script src="static/translations.js"></script>
+<script src="static/language.js"></script>
 </body>
 </html>

@@ -9,10 +9,230 @@
     color: white;
 }
 
+/* Navigationsleiste */
+.navbar {
+    background-color: #1e293b;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-center {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #aa5df8, #c77dff);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    background-color: #782ddb;
+    box-shadow: 0 0 20px rgba(120, 45, 219, 0.5);
+}
+
+.navbar-right {
+    margin-left: auto;
+}
+
 /* Text-Hervorhebung */
 .highlight {
     color: #aa5df8;
     font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight:hover {
+    color: #c77dff;
+    text-shadow: 0 0 20px rgba(170, 93, 248, 0.8),
+                 0 0 30px rgba(170, 93, 248, 0.6),
+                 0 0 40px rgba(170, 93, 248, 0.4);
+    transform: scale(1.05);
+}
+
+/* Screenshot Effekte */
+.screenshot-img {
+    transition: all 0.4s ease;
+    cursor: pointer;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.screenshot-img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 40px rgba(120, 45, 219, 0.4),
+                0 0 60px rgba(170, 93, 248, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Feature Cards Effekte */
+.bg-slate-700 {
+    transition: all 0.3s ease;
+}
+
+.bg-slate-700:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background-color: #334155 !important;
+}
+
+/* Button Effekte */
+.bg-indigo-600, .bg-slate-700.px-6 {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-indigo-600::before, .bg-slate-700.px-6::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.bg-indigo-600:hover::before, .bg-slate-700.px-6:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.bg-indigo-600:hover {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+    transform: translateY(-2px);
+}
+
+.bg-slate-700.px-6:hover {
+    box-shadow: 0 0 30px rgba(120, 45, 219, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Navigation Link Effekte */
+/* Social Media Icons Glow */
+.fa:hover {
+    opacity: 1;
+    box-shadow: 0 0 20px currentColor;
+    transform: scale(1.1) rotate(5deg);
+    transition: all 0.3s ease;
+}
+
+/* Email Link Effekte */
+.email {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.email:hover {
+    color: #aa5df8 !important;
+    text-shadow: 0 0 10px rgba(170, 93, 248, 0.6);
+}
+
+/* Footer Links Effekte */
+.link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: #aa5df8 !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 15px rgba(170, 93, 248, 0.5);
+}
+
+/* Card Container Effekte */
+.bg-slate-800 {
+    transition: all 0.3s ease;
+}
+
+.bg-slate-800:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Language Selector Effekte */
+#languageSelector {
+    transition: all 0.3s ease;
+}
+
+#languageSelector:hover {
+    box-shadow: 0 0 15px rgba(120, 45, 219, 0.4);
+    transform: scale(1.05);
+}
+
+#languageSelector:focus {
+    outline: 2px solid #aa5df8;
+    box-shadow: 0 0 20px rgba(120, 45, 219, 0.6);
+}
+
+/* Smooth Animations für alle Elemente */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pulse Animation für wichtige Elemente */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(120, 45, 219, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(120, 45, 219, 0.6);
+    }
+}
+
+.bg-indigo-600:active {
+    animation: pulse-glow 0.5s ease;
+}
+
+/* Textbox einheitliche Höhe */
+.bg-slate-700.rounded-lg.overflow-hidden {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.bg-slate-700.rounded-lg.overflow-hidden .p-4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-slate-700.rounded-lg.overflow-hidden .p-4 p {
+    flex: 1;
 }
 
 /* Rundes Profilbild */

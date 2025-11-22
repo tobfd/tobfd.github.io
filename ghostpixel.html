@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta content="GhostPixel - Discord Bot" property="og:title" />
+    <meta content="GhostPixel - Discord Bot für E-Mail Tracking-Pixel. Erstelle unsichtbare Tracking-Pixel und sieh, wann deine E-Mails geöffnet werden - datenschutzfreundlich und DSGVO-konform." property="og:description" />
+    <meta name="description" content="GhostPixel ist ein Discord-Bot für E-Mail Tracking-Pixel. Einfach zu nutzen, datenschutzfreundlich und DSGVO-konform. Perfekt für Bewerbungen, wichtige Nachrichten oder den Alltag." />
+    <meta name="keywords" content="GhostPixel, Discord Bot, Email Tracking, Tracking Pixel, DSGVO, Datenschutz, E-Mail Tracking, Discord, Python, FastAPI" />
+    <meta name="author" content="Tobias Schmitt" />
+    <meta content="https://tobfd.github.io/img/profile_picture.webp" property="og:image" />
+    <meta content="#782ddb" data-react-helmet="true" name="theme-color" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/webp" href="./img/profile_picture.webp"/>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/ghostpixel-style.css">
+    <title>GhostPixel - Discord Bot for Email Tracking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-slate-900 text-white">
+<!-- Navigationsleiste -->
+<nav class="navbar">
+    <div class="navbar-center">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="ghostpixel.html" class="nav-link active">GhostPixel</a>
+    </div>
+    <div class="navbar-right">
+        <select id="languageSelector" class="bg-slate-700 text-white px-4 py-2 rounded-lg border border-slate-600 cursor-pointer hover:bg-slate-600 transition-all">
+            <option value="en">🇬🇧 English</option>
+            <option value="de">🇩🇪 Deutsch</option>
+        </select>
+    </div>
+</nav>
+
+<div class="px-20 py-16">
+    <!-- Header Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <div class="flex items-center justify-center mb-6">
+            <img src="./img/profile_picture.webp" alt="GhostPixel Logo" class="w-32 h-32 rounded-full mr-6">
+            <div>
+                <h1 class="text-5xl font-bold mb-2">GhostPixel</h1>
+                <p class="text-xl text-neutral-400" data-i18n="header.subtitle">Discord Bot für E-Mail Tracking-Pixel</p>
+            </div>
+        </div>
+
+        <div class="text-center mb-6">
+            <p class="text-lg leading-relaxed">
+                <span class="highlight">GhostPixel</span> <span data-i18n="header.description">ist ein Discord-Bot, mit dem du <span class="highlight">unsichtbare Tracking-Pixel</span> erstellen kannst,
+                um zu sehen, wann eine E-Mail geöffnet wurde – <span class="highlight">ohne persönliche Daten</span> zu speichern.</span>
+            </p>
+        </div>
+
+        <div class="flex justify-center gap-4 mt-6">
+            <a href="https://discord.com/oauth2/authorize?client_id=1412038234116194324" target="_blank" rel="noopener noreferrer"
+               class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold transition-all">
+                🤖 <span data-i18n="buttons.inviteBot">Bot einladen</span>
+            </a>
+            <a href="https://discord.gg/Q99s2PPBdC" target="_blank" rel="noopener noreferrer"
+               class="bg-slate-700 hover:bg-slate-600 px-6 py-3 rounded-lg font-semibold transition-all">
+                💬 <span data-i18n="buttons.supportServer">Support-Server</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="features.title">✨ Funktionen</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature1.title">📩 Tracking-Pixel erstellen</h3>
+                <p class="text-neutral-300" data-i18n="features.feature1.desc">Erstelle Tracking-Pixel direkt über Discord-Befehle und erhalte den passenden HTML-Code für deine E-Mail.</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature2.title">📊 Statistiken einsehen</h3>
+                <p class="text-neutral-300" data-i18n="features.feature2.desc">Sieh dir im Bot an, wann deine E-Mails geöffnet wurden und behalte den Überblick.</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature3.title">🧾 Pixel verwalten</h3>
+                <p class="text-neutral-300" data-i18n="features.feature3.desc">Verwalte deine erstellten Tracking-Pixel und lösche sie jederzeit wieder.</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature4.title">🌐 Status-Überwachung</h3>
+                <p class="text-neutral-300" data-i18n="features.feature4.desc">Status-Seite über Uptime Kuma zeigt an, ob Bot, API und Datenbank online sind.</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature5.title">⚙️ Moderne Technologie</h3>
+                <p class="text-neutral-300" data-i18n="features.feature5.desc">Der Bot läuft vollständig über eine eigene FastAPI-API mit PostgreSQL-Datenbank.</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-3" data-i18n="features.feature6.title">🌍 Mehrsprachig</h3>
+                <p class="text-neutral-300" data-i18n="features.feature6.desc">Unterstützt <span class="highlight">Deutsch</span> und <span class="highlight">Englisch</span> für internationale Nutzer.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screenshots Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="screenshots.title">📸 Einblicke</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Overview -->
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+                <img src="./img/ghostpixel_overview_de.webp" alt="GhostPixel Übersicht" class="w-full screenshot-img" data-img-de="./img/ghostpixel_overview_de.webp" data-img-en="./img/ghostpixel_overview_en.webp">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="screenshots.screenshot1.title">Bot-Übersicht</h3>
+                    <p class="text-neutral-300 text-sm" data-i18n="screenshots.screenshot1.desc">Hier siehst du die Hauptfunktionen von GhostPixel auf einen Blick. Der Bot bietet eine intuitive Benutzeroberfläche direkt in Discord.</p>
+                </div>
+            </div>
+
+            <!-- Manage Command -->
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+                <img src="./img/manage_cmd_de.webp" alt="Verwaltungs-Befehl" class="w-full screenshot-img" data-img-de="./img/manage_cmd_de.webp" data-img-en="./img/manage_cmd_en.webp">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="screenshots.screenshot2.title">Pixel-Verwaltung</h3>
+                    <p class="text-neutral-300 text-sm" data-i18n="screenshots.screenshot2.desc">Mit dem Verwaltungs-Befehl kannst du alle deine erstellten Tracking-Pixel einsehen, bearbeiten und löschen.</p>
+                </div>
+            </div>
+
+            <!-- All Events -->
+            <div class="bg-slate-700 rounded-lg overflow-hidden">
+                <img src="./img/all_events_de.webp" alt="Alle Events" class="w-full screenshot-img" data-img-de="./img/all_events_de.webp" data-img-en="./img/all_events_en.webp">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2" data-i18n="screenshots.screenshot3.title">Event-Übersicht</h3>
+                    <p class="text-neutral-300 text-sm" data-i18n="screenshots.screenshot3.desc">Behalte den Überblick über alle Tracking-Events. Sieh genau, wann deine E-Mails geöffnet wurden.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="privacy.title">🔒 Datenschutz</h2>
+        <div class="bg-slate-700 p-6 rounded-lg">
+            <p class="text-lg mb-4">
+                <span class="highlight">GhostPixel</span> <span data-i18n="privacy.intro">ist <span class="highlight">datenschutzfreundlich</span> konzipiert und entspricht der <span class="highlight">DSGVO</span>:</span>
+            </p>
+            <ul class="space-y-3 text-neutral-300">
+                <li class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span data-i18n="privacy.point1"><strong>Keine IP-Adressen</strong> – Es werden keine IP-Adressen der E-Mail-Empfänger gespeichert</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span data-i18n="privacy.point2"><strong>Keine Gerätedaten</strong> – Keine User-Agents oder Geräteinformationen werden erfasst</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span data-i18n="privacy.point3"><strong>Minimal-Prinzip</strong> – Nur Discord User-ID und Zeitstempel des Aufrufs werden gespeichert</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span data-i18n="privacy.point4"><strong>Europa-Hosting</strong> – Server läuft im IONOS Rechenzentrum innerhalb der Europäischen Union (EU)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="tech.title">⚙️ Technische Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-slate-700 p-6 rounded-lg text-center">
+                <div class="text-4xl mb-3">🐍</div>
+                <h3 class="text-xl font-semibold mb-2">Python & FastAPI</h3>
+                <p class="text-neutral-300" data-i18n="tech.tech1">Modernes Backend mit FastAPI für schnelle API-Anfragen</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg text-center">
+                <div class="text-4xl mb-3">🗄️</div>
+                <h3 class="text-xl font-semibold mb-2">PostgreSQL</h3>
+                <p class="text-neutral-300" data-i18n="tech.tech2">Zuverlässige Datenbank für alle Tracking-Daten</p>
+            </div>
+            <div class="bg-slate-700 p-6 rounded-lg text-center">
+                <div class="text-4xl mb-3">📊</div>
+                <h3 class="text-xl font-semibold mb-2">Uptime Kuma</h3>
+                <p class="text-neutral-300" data-i18n="tech.tech3">Live-Statusüberwachung für Bot, API und Datenbank</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Target Audience Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="audience.title">🎯 Für wen ist GhostPixel?</h2>
+        <div class="bg-slate-700 p-6 rounded-lg">
+            <p class="text-lg text-neutral-300 leading-relaxed text-center" data-i18n="audience.desc">
+                GhostPixel richtet sich an <span class="highlight">Entwickler</span>, <span class="highlight">Technikinteressierte</span> und
+                <span class="highlight">Marketing-Enthusiasten</span>, die auf einfache Weise nachvollziehen möchten, wann ihre gesendeten
+                E-Mails geöffnet werden – ohne dabei persönliche Daten der Empfänger zu speichern.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="bg-slate-800 rounded-lg p-8 mb-8">
+        <h2 class="text-3xl font-bold mb-6 text-center" data-i18n="contact.title">📬 Kontakt & Support</h2>
+        <div class="text-center">
+            <p class="text-lg mb-4 text-neutral-300">
+                <span data-i18n="contact.creator">Ersteller:</span> <span class="highlight">Tobias Schmitt</span> (tobfd)
+            </p>
+            <p class="text-lg mb-4">
+                E-Mail: <a href="mailto:support@tobfd.de" class="email hover:text-white">support@tobfd.de</a>
+            </p>
+            <p class="text-lg mb-4 text-neutral-300">
+                Website: <span class="highlight">ghostpixel.tobfd.de</span> <span data-i18n="contact.planned">(geplant)</span>
+            </p>
+            <div class="flex justify-center gap-4 mt-6">
+                <a href="https://discord.gg/Q99s2PPBdC" target="_blank" rel="noopener noreferrer"
+                   class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg font-semibold transition-all">
+                    💬 <span data-i18n="buttons.joinSupportServer">Support-Server beitreten</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="links">
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/impressum" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.imprint">Impressum</a>
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.privacy">Datenschutzerklärung</a>
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel/rechtliches/nutzungsbedingungen-fur-ghostpixel" class="link footer-link-de" target="_blank" rel="noopener noreferrer" data-i18n="footer.terms">Nutzungsbedingungen</a>
+
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel/legal-notice" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.imprint">Legal notice</a>
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="https://tobfd.gitbook.io/legal-ghostpixel/terms-of-service-for-ghostpixel" class="link footer-link-en" target="_blank" rel="noopener noreferrer" style="display: none;" data-i18n="footer.terms">Terms of Service</a>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" title="Nach oben scrollen">↑</button>
+
+<script src="static/ghostpixel-translations.js"></script>
+<script src="static/ghostpixel-language.js"></script>
+<script src="static/scroll-to-top.js"></script>
+</body>
+</html>
